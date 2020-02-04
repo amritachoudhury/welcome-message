@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'welcome-message';
+  public name = 'John Doe';
+  public username: string;
+  public show = false;
+
+public welcomeMe() {
+  if (this.name !== '') {
+    this.show = true;
+    this.username = this.name;
+  } else {
+  this.show = false;
+  }
+}
 }
